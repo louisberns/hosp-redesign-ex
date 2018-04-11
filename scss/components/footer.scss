@@ -1,0 +1,34 @@
+/*TODO:
+	- add shadow top on foote
+r*/
+
+.footer-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+
+	.footer-block {
+		width: 100%;
+		height: 25px;
+		background: $color-secondary;
+
+		@include z-depth-8dp("-");
+
+		.footer-block__sys, .footer-block__ver, .footer-block__blank {
+			min-width: 50px;
+			margin: 0 20px;
+			font-size: 14px;
+			color: $color-white;
+		}
+
+		.footer-block__ver {
+			justify-self: end;
+		}
+
+		.footer-block__blank {
+			
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/*Base import*/
+@import 'base/variables.scss';
+@import 'base/material-shadows.scss';
+@import 'base/reset.scss';
+
+/*Components import*/
+@import 'components/header.scss';
+@import 'components/menu.scss';
+@import 'components/content.scss';
+@import 'components/footer.scss';
+
+/*Styleguide import*/
+@import 'styleguide/template.scss';

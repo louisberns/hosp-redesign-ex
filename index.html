@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hospitalar Redesign - Exemplo de estrutura</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="page-template container column justify-content-between">
+		<div class="header-wrap container">
+			<header class="header-block container column">
+				<div class="header-block__main container justify-content-between align-items-center">
+					<div class="header-logo container">
+						<div class="header-logo__image">
+							<img src="img/logo.svg" alt="logo Benner">
+						</div>
+					</div>
+					<div class="header-opt container justify-content-between align-items-center">
+						<div class="header-opt__actions container align-items-center">
+							<ul class="actions-list container align-items-center">
+								<li class="actions-list__item">Ajuda <i><img src="img/icons/help.svg" alt=""></i></li>
+								<li class="actions-list__item">Mensageiro <i><img src="img/icons/message.svg" alt=""></i></li>
+							</ul>
+						</div>
+						<div class="header-opt__user container justify-content-center align-items-center">
+							<div class="user-picture container">
+								<img src="img/person.png" alt="foto do usuário logado no sistema">
+							</div>
+							<div class="open-user-menu container">
+								<i><img src="img/icons/arrow_drop_down.svg" alt="ícone dropdown"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-block__sub container justify-content-between align-items-center">
+					<div class="header-breadcrumb container align-items-center">
+						<span>Início</span>
+						<i><img src="img/icons/keyboard_arrow_right.svg" alt="breadcrumb arrow"></i>
+						<span>Assistencial</span>
+						<i><img src="img/icons/keyboard_arrow_right.svg" alt="breadcrumb arrow"></i>
+						<span>Saúde Ocupacional</span>
+					</div>
+					<div class="header-back container align-items-center">
+						<i><img src="img/icons/arrow_back.svg" alt="arrow backwards"></i> Voltar
+					</div>
+				</div>
+			</header>
+		</div>
+		
+		<div class="main-wrap container justify-content-between">
+			<!--Menu lateral, com infos do paciente e opções para interagir com o conteúdo-->		
+			<div class="menu-wrap container">
+				<div class="menu-block container column align-self-end">
+					<div class="menu-block__header container justify-content-between align-items-center">
+						<span><strong>Saúde Ocupacional</strong></span>
+						<i><img src="img/icons/close.svg" alt=""></i>
+					</div>
+					<div class="menu-block__info container flex-grow-1">
+						
+					</div>
+					<div class="menu-block__opt container flex-grow-5">
+						<ul class="opt-list container column">
+							<li class="opt-list__item"><i><img src="img/icons/document.svg" alt=""></i> Cadastros</li>
+							<li class="opt-list__item"><i><img src="img/icons/search.svg" alt=""></i> Pesquisas</li>
+							<li class="opt-list__item"><i><img src="img/icons/settings.svg" alt=""></i> Configurações</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!--Conteúdo principal de interação com a aplicação-->
+			<div class="content-wrap container">
+				<div class="content-block">
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--Footer com informação de qual base está sendo utilizada e qual a versão do sistema, fixo no bottom-->
+		<div class="footer-wrap container justify-content-end">
+			<footer class="footer-block container justify-content-between align-items-center">
+				<div class="footer-block__blank container"></div>
+				<div class="footer-block__sys container"><strong>Desenvolvimento</strong></div>
+				<div class="footer-block__ver container">Versão 14.00</div>
+			</footer>
+		</div>
+	</body>
+</html>

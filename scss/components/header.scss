@@ -45,6 +45,10 @@
 							padding: 10px;
 							margin: 0 5px;
 
+							a {
+								color: $color-white;
+							}
+
 							img {
 
 							}
@@ -71,7 +75,14 @@
 		.header-block__sub {
 			height: 35px;
 			background: $color-tertiary;
-			color: $color-dark;
+
+			a, span {
+				color: $color-dark;
+			}
+
+			a {
+				text-decoration: underline;
+			}
 		}
 	}
 }

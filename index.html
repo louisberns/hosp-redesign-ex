@@ -11,16 +11,18 @@
 				<div class="header-block__main container justify-content-between align-items-center">
 					<div class="header-logo container">
 						<div class="header-logo__image">
-							<img src="img/logo.svg" alt="logo Benner">
+							<a href=""><img src="img/logo.svg" alt="logo Benner"></a>
 						</div>
 					</div>
 					<div class="header-opt container justify-content-between align-items-center">
+						<!--Opções de interação com todo o sistema, chamadas externas-->
 						<div class="header-opt__actions container align-items-center">
 							<ul class="actions-list container align-items-center">
-								<li class="actions-list__item">Ajuda <i><img src="img/icons/help.svg" alt=""></i></li>
-								<li class="actions-list__item">Mensageiro <i><img src="img/icons/message.svg" alt=""></i></li>
+								<li class="actions-list__item"><a href="">Ajuda <i><img src="img/icons/help.svg" alt=""></i></a></li>
+								<li class="actions-list__item"><a href="">Mensageiro <i><img src="img/icons/message.svg" alt=""></i></a></li>
 							</ul>
 						</div>
+						<!--Informações de login e opções de perfil do usuário-->
 						<div class="header-opt__user container justify-content-center align-items-center">
 							<div class="user-picture container">
 								<img src="img/person.png" alt="foto do usuário logado no sistema">
@@ -32,37 +34,50 @@
 					</div>
 				</div>
 				<div class="header-block__sub container justify-content-between align-items-center">
+					<!--Breadcrumb que indica a localização do usuário no momento-->
 					<div class="header-breadcrumb container align-items-center">
-						<span>Início</span>
+						<a href=""><span>Início</span></a>
 						<i><img src="img/icons/keyboard_arrow_right.svg" alt="breadcrumb arrow"></i>
-						<span>Assistencial</span>
+						<a href=""><span>Assistencial</span></a>
 						<i><img src="img/icons/keyboard_arrow_right.svg" alt="breadcrumb arrow"></i>
 						<span>Saúde Ocupacional</span>
 					</div>
+					<!--Opção para voltar ao início do sistema-->
 					<div class="header-back container align-items-center">
-						<i><img src="img/icons/arrow_back.svg" alt="arrow backwards"></i> Voltar
+						<a href=""><i><img src="img/icons/arrow_back.svg" alt="arrow backwards"></i> Voltar</a>
 					</div>
 				</div>
 			</header>
 		</div>
-		
+
 		<div class="main-wrap container justify-content-between">
-			<!--Menu lateral, com infos do paciente e opções para interagir com o conteúdo-->		
+			<!--Menu lateral, com infos do paciente e opções para interagir com o conteúdo-->
 			<div class="menu-wrap container">
 				<div class="menu-block container column align-self-end">
 					<div class="menu-block__header container justify-content-between align-items-center">
 						<span><strong>Saúde Ocupacional</strong></span>
 						<i><img src="img/icons/close.svg" alt=""></i>
 					</div>
-					<div class="menu-block__info container flex-grow-1">
-						
+					<!--Informações sobre o paciente que está sendo utilizado no conteúdo-->
+					<div class="menu-block__info container column align-items-center flex-grow-1">
+						<div class="toggle-patient container align-self-end">
+							<i><img src="img/icons/arrow_drop_up.svg" alt="toggle infos do paciente"></i>
+						</div>
+						<div class="patient-pic container align-center">
+							<img src="img/icons/person.svg" alt="imagem do paciente">
+						</div>
+						<div class="info-patient container column align-items-center">
+							<span><strong>Nome do paciente</strong></span>
+							<span>Informações do paciente</span>
+						</div>
 					</div>
+					<!--Menu para interação com o conteúdo principal do aplicativo acessado-->
 					<div class="menu-block__opt container flex-grow-5">
-						<ul class="opt-list container column">
-							<li class="opt-list__item"><i><img src="img/icons/document.svg" alt=""></i> Cadastros</li>
-							<li class="opt-list__item"><i><img src="img/icons/search.svg" alt=""></i> Pesquisas</li>
-							<li class="opt-list__item"><i><img src="img/icons/settings.svg" alt=""></i> Configurações</li>
-						</ul>
+						<div class="opt-list container column">
+							<a class="opt-list__item" href=""><i><img src="img/icons/document.svg" alt=""></i> Cadastros</a>
+							<a class="opt-list__item" href=""><i><img src="img/icons/search.svg" alt=""></i> Pesquisas</a>
+							<a class="opt-list__item" href=""><i><img src="img/icons/settings.svg" alt=""></i> Configurações</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -70,11 +85,11 @@
 			<!--Conteúdo principal de interação com a aplicação-->
 			<div class="content-wrap container">
 				<div class="content-block">
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 		<!--Footer com informação de qual base está sendo utilizada e qual a versão do sistema, fixo no bottom-->
 		<div class="footer-wrap container justify-content-end">
 			<footer class="footer-block container justify-content-between align-items-center">

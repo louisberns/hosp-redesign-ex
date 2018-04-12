@@ -1,5 +1,4 @@
 /*TODO:
- * - fix links list, add <a> tag
  * - add function for close menu
  * - create class for click/active and focus buttons
  */
@@ -19,20 +18,49 @@
 		@include z-depth(8);
 
 		.menu-block__header {
-			padding: 0 10px;
+			padding: 0 15px;
+			margin: 0 0 5px 0;
 			background: $color-secondary;
-			height: 40px;
+			height: 35px;
 			color: $color-white;
 			border-radius: 0 8px 0 0;
-			z-index: 20;
+			//z-index: 20;
 
-			@include z-depth(4);
+			//@include z-depth(4);
 		}
 
 		.menu-block__info {
 			background: transparent;
 			height: 140px;
 			z-index: 10;
+			margin: 10px 0;
+
+			.toggle-patient {
+				position: relative;
+
+				i {
+					position: absolute;
+					right: 15px;
+					top: 0;
+				}
+			}
+
+			.patient-pic {
+				background: $color-gray;
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				margin: 5px 0 15px 0;
+
+				img {
+					width: 85%;
+				}
+			}
+
+			.info-patient {
+				margin: 0;
+				color: $color-white;
+			}
 		}
 
 		.menu-block__opt {
@@ -44,18 +72,20 @@
 			@include z-depth-2dp("-");
 
 			.opt-list {
-				margin: 15px 0;
 				width: 100%;
 
 				.opt-list__item {
-					padding: 15px 20px;
+					box-sizing: border-box;
+					padding: 17px 20px;
+					width: 100%;
+					color: $color-dark;
 
 					i {
 						margin-right: 12px;
 					}
 
 					&:hover {
-						background: $color-tertiary;
+						background: $color-gray;
 						cursor: pointer;
 					}
 				}

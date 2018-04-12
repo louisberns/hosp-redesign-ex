@@ -21,7 +21,7 @@
 		height: 100%;
 		z-index: 5;
 
-		@include z-depth(8);
+		@include z-depth(6);
 
 		.menu-block__header {
 			padding: 0 15px;
@@ -31,9 +31,6 @@
 			color: $color-white;
 			border-radius: 0 8px 0 0;
 			font-size: $font-head-sm;
-			//z-index: 20;
-
-			//@include z-depth(4);
 
 			i {
 				cursor: pointer;
@@ -77,10 +74,6 @@
 				color: $color-white;
 				font-size: $font-size-sm;
 				line-height: 1.2em;
-
-				strong {
-					//font-size: 18px;
-				}
 			}
 		}
 

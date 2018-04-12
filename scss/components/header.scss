@@ -16,7 +16,7 @@
 
 		.header-block__main {
 			height: 60px;
-			background: $color-primary-dark;
+			background: $color-primary;
 			z-index: 20;
 
 			@include z-depth(8);

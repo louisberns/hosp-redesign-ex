@@ -1,3 +1,10 @@
+/*TODO:
+ * - add class for focus and active to actions on header menu
+ * - add open user setting pop over
+ * - add link <a> tag for breadcrumb and back button
+ * - add link on logo header
+ */
+
 .header-wrap {
 	.header-block {
 		width: 100%;
@@ -8,7 +15,7 @@
 		}
 
 		.header-block__main {
-			height: 80px;
+			height: 60px;
 			background: $color-secondary;
 			z-index: 20;
 
@@ -20,7 +27,7 @@
 				.header-logo__image {
 
 					img {
-						width: 100%;
+						width: 80%;
 					}
 				}
 			}
@@ -28,7 +35,7 @@
 			.header-opt {
 
 				.header-opt__actions {
-					
+
 					.actions-list {
 						color: $color-white;
 						font-weight: 700;
@@ -39,7 +46,7 @@
 							margin: 0 5px;
 
 							img {
-								
+
 							}
 
 						}
@@ -49,10 +56,11 @@
 				.header-opt__user {
 
 					.user-picture {
-						
+
 
 						img {
-							width: 100%;
+							width: 80%;
+							height: 80%;
 							border-radius: 50%;
 						}
 					}
@@ -61,7 +69,7 @@
 		}
 
 		.header-block__sub {
-			height: 40px;
+			height: 35px;
 			background: $color-tertiary;
 			color: $color-dark;
 		}

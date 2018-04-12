@@ -8,12 +8,14 @@
 
 	.footer-block {
 		position: relative;
-		bottom: -20px;
+		bottom: 0;
 		width: 100%;
 		height: 25px;
 		background: $color-primary;
-		animation-name: auto-toggle;
-		animation-duration: 2s;
+		opacity: .8;
+		@include toggle-transition();
+
+		@include z-depth-6dp("-");
 
 		.footer-block__sys, .footer-block__ver, .footer-block__blank {
 			min-width: 50px;
@@ -30,17 +32,8 @@
 
 		}
 
-		&.auto-toggle-footer {
-			@include toggle-translate($dis: 0, $disY: -20px);
+		&:hover {
+			opacity: 1;
 		}
-	}
-}
-
-@keyframes auto-toggle {
-	0% {
-		bottom: 0;
-	}
-	100% {
-		@include toggle-translate($dis: 0, $disY: 5px, $sec: .48s);
 	}
 }

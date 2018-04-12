@@ -6,17 +6,3 @@ toggleMenuIcon.addEventListener("click", () => {
   const toggleMenu = menu.classList.toggle("menu-wrap___closed");
   return (toggleMenu ? toggleMenuIcon.innerHTML = "menu" : toggleMenuIcon.innerHTML = "close");
 });
-
-footer.addEventListener("mouseenter", () => {
-  const toggleFooter = footer.classList.toggle("auto-toggle-footer");
-
-  if (toggleFooter) {
-    this.setTimeout(() => footer.classList.toggle("auto-toggle-footer"), 3000);
-  } else {
-    return;
-  }
-});
-
-function toggleBack(func) {
-
-}

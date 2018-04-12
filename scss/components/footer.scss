@@ -19,7 +19,7 @@ r*/
 		.footer-block__sys, .footer-block__ver, .footer-block__blank {
 			min-width: 50px;
 			margin: 0 20px;
-			font-size: 14px;
+			font-size: $font-size-xs;
 			color: $color-white;
 		}
 
@@ -28,7 +28,7 @@ r*/
 		}
 
 		.footer-block__blank {
-			
+
 		}
 	}
 }

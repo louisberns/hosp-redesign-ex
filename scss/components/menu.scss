@@ -24,6 +24,7 @@
 			height: 35px;
 			color: $color-white;
 			border-radius: 0 8px 0 0;
+			font-size: $font-head-sm;
 			//z-index: 20;
 
 			//@include z-depth(4);
@@ -48,8 +49,10 @@
 			.patient-pic {
 				background: $color-gray;
 				border-radius: 50%;
-				width: 100px;
-				height: 100px;
+				width: 100%;
+				height: 100%;
+				max-width: 120px;
+				max-height: 120px;
 				margin: 5px 0 15px 0;
 
 				img {
@@ -60,6 +63,12 @@
 			.info-patient {
 				margin: 0;
 				color: $color-white;
+				font-size: $font-size-sm;
+				line-height: 1.2em;
+
+				strong {
+					//font-size: 18px;
+				}
 			}
 		}
 
@@ -73,6 +82,7 @@
 
 			.opt-list {
 				width: 100%;
+				font-size: $font-size-nm;
 
 				.opt-list__item {
 					box-sizing: border-box;

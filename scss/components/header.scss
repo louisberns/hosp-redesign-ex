@@ -40,6 +40,7 @@
 						color: $color-white;
 						font-weight: 700;
 						margin-right: 40px;
+						font-size: $font-size-nm;
 
 						.actions-list__item {
 							padding: 10px;
@@ -61,7 +62,6 @@
 
 					.user-picture {
 
-
 						img {
 							width: 80%;
 							height: 80%;
@@ -75,6 +75,7 @@
 		.header-block__sub {
 			height: 35px;
 			background: $color-tertiary;
+			font-size: $font-size-sm;
 
 			a, span {
 				color: $color-dark;

@@ -16,7 +16,7 @@
 
 		.header-block__main {
 			height: 60px;
-			background: $color-secondary;
+			background: $color-primary-dark;
 			z-index: 20;
 
 			@include z-depth(8);
@@ -50,10 +50,6 @@
 								color: $color-white;
 							}
 
-							img {
-
-							}
-
 						}
 					}
 				}
@@ -68,16 +64,20 @@
 							border-radius: 50%;
 						}
 					}
+
+					i {
+						color: $color-white;
+					}
 				}
 			}
 		}
 
 		.header-block__sub {
 			height: 35px;
-			background: $color-tertiary;
+			background: $color-secondary;
 			font-size: $font-size-sm;
 
-			a, span {
+			a, span, i {
 				color: $color-dark;
 			}
 

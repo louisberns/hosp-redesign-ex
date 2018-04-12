@@ -4,6 +4,7 @@
 		<title>Hospitalar Redesign - Exemplo de estrutura</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<body class="page-template container column justify-content-between">
 		<div class="header-wrap container">
@@ -18,8 +19,8 @@
 						<!--Opções de interação com todo o sistema, chamadas externas-->
 						<div class="header-opt__actions container align-items-center">
 							<ul class="actions-list container align-items-center">
-								<li class="actions-list__item"><a href="">Ajuda <i><img src="img/icons/help.svg" alt=""></i></a></li>
-								<li class="actions-list__item"><a href="">Mensageiro <i><img src="img/icons/message.svg" alt=""></i></a></li>
+								<li class="actions-list__item"><a href="">Ajuda <i class="material-icons">help_outline</i></a></li>
+								<li class="actions-list__item"><a href="">Mensageiro <i class="material-icons">message</i></a></li>
 							</ul>
 						</div>
 						<!--Informações de login e opções de perfil do usuário-->
@@ -28,7 +29,7 @@
 								<img src="img/person.png" alt="foto do usuário logado no sistema">
 							</div>
 							<div class="open-user-menu container">
-								<i><img src="img/icons/arrow_drop_down.svg" alt="ícone dropdown"></i>
+								<i class="material-icons md-light">arrow_drop_down</i>
 							</div>
 						</div>
 					</div>
@@ -37,14 +38,14 @@
 					<!--Breadcrumb que indica a localização do usuário no momento-->
 					<div class="header-breadcrumb container align-items-center">
 						<a href=""><span>Início</span></a>
-						<i><img src="img/icons/keyboard_arrow_right.svg" alt="breadcrumb arrow"></i>
+						<i class="material-icons">keyboard_arrow_right</i>
 						<a href=""><span>Assistencial</span></a>
-						<i><img src="img/icons/keyboard_arrow_right.svg" alt="breadcrumb arrow"></i>
+						<i class="material-icons">keyboard_arrow_right</i>
 						<span>Saúde Ocupacional</span>
 					</div>
 					<!--Opção para voltar ao início do sistema-->
 					<div class="header-back container align-items-center">
-						<a href=""><i><img src="img/icons/arrow_back.svg" alt="arrow backwards"></i> Voltar</a>
+						<a href=""><i class="material-icons">keyboard_backspace</i>Voltar</a>
 					</div>
 				</div>
 			</header>
@@ -52,16 +53,16 @@
 
 		<div class="main-wrap container justify-content-between flex-grow-1">
 			<!--Menu lateral, com infos do paciente e opções para interagir com o conteúdo-->
-			<div class="menu-wrap container">
+			<div class="menu-wrap container flex-grow-1">
 				<div class="menu-block container column align-self-end">
 					<div class="menu-block__header container justify-content-between align-items-center">
 						<span><strong>Saúde Ocupacional</strong></span>
-						<i><img src="img/icons/close.svg" alt=""></i>
+						<i id="toggle-menu-icon" class="material-icons">close</i>
 					</div>
 					<!--Informações sobre o paciente que está sendo utilizado no conteúdo-->
 					<div class="menu-block__info container column justify-content-around align-items-center flex-grow-1">
 						<div class="toggle-patient container align-self-end">
-							<i><img src="img/icons/arrow_drop_up.svg" alt="toggle infos do paciente"></i>
+							<i class="material-icons md-light">arrow_drop_up</i>
 						</div>
 						<div class="patient-pic container align-center">
 							<img src="img/icons/person.svg" alt="imagem do paciente">
@@ -74,17 +75,17 @@
 					<!--Menu para interação com o conteúdo principal do aplicativo acessado-->
 					<div class="menu-block__opt container flex-grow-5">
 						<div class="opt-list container column">
-							<a class="opt-list__item" href=""><i><img src="img/icons/document.svg" alt=""></i> Cadastros</a>
-							<a class="opt-list__item" href=""><i><img src="img/icons/search.svg" alt=""></i> Pesquisas</a>
-							<a class="opt-list__item" href=""><i><img src="img/icons/settings.svg" alt=""></i> Configurações</a>
+							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">assignment</i> Cadastros <i class="material-icons dropdown-icon">arrow_drop_down</i></a>
+							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">search</i> Pesquisas <i class="material-icons dropdown-icon">arrow_drop_down</i></a>
+							<a class="opt-list__item" href=""><i class="material-icons">settings</i> Configurações</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!--Conteúdo principal de interação com a aplicação-->
-			<div class="content-wrap container">
-				<div class="content-block">
+			<div class="content-wrap container justify-content-center flex-grow-2">
+				<div class="content-block container">
 
 				</div>
 			</div>
@@ -98,5 +99,7 @@
 				<div class="footer-block__ver container">Versão 14.00</div>
 			</footer>
 		</div>
+
+		<script src="js/main.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 /*Toggle functions*/
-@mixin toggle-translate($dis: -2000px, $sec: .58s, $form: ease-in-out) {
-  transform: translate($dis);
+@mixin toggle-translate($dis: -2000px, $disY: 0, $sec: .58s, $form: ease-in-out) {
+  transform: translate($dis,$disY);
   transition: $sec $form;
 }
 

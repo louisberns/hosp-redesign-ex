@@ -56,18 +56,18 @@
 			<div class="menu-wrap container flex-grow-1">
 				<div class="menu-block container column align-self-end">
 					<div class="menu-block__header container justify-content-between align-items-center">
-						<span><strong>Saúde Ocupacional</strong></span>
-						<i id="toggle-menu-icon" class="material-icons">close</i>
+						<span class="animate leave"><span><strong>Saúde Ocupacional</strong></span></span>
+						<span class="menu-icon"><i id="toggle-menu-icon" class="material-icons toggle-menu-icon">close</i></span>
 					</div>
 					<!--Informações sobre o paciente que está sendo utilizado no conteúdo-->
 					<div class="menu-block__info container column justify-content-around align-items-center flex-grow-1">
-						<div class="toggle-patient container align-self-end">
+						<div class="toggle-patient container align-self-end animate">
 							<i class="material-icons md-light">arrow_drop_up</i>
 						</div>
-						<div class="patient-pic container align-center">
+						<div id="patient-pic" class="patient-pic container align-center animate">
 							<img src="img/icons/person.svg" alt="imagem do paciente">
 						</div>
-						<div class="info-patient container column align-items-center">
+						<div class="info-patient container column align-items-center animate">
 							<span><strong>Nome do paciente</strong></span>
 							<span>Informações do paciente</span>
 						</div>
@@ -75,16 +75,31 @@
 					<!--Menu para interação com o conteúdo principal do aplicativo acessado-->
 					<div class="menu-block__opt container flex-grow-5">
 						<div class="opt-list container column">
-							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">assignment</i> Cadastros <i class="material-icons dropdown-icon">arrow_drop_down</i></a>
-							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">search</i> Pesquisas <i class="material-icons dropdown-icon">arrow_drop_down</i></a>
-							<a class="opt-list__item" href=""><i class="material-icons">settings</i> Configurações</a>
+							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">assignment</i> <span class="animate leave"><span>Cadastros</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i></a>
+							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">search</i> <span class="animate leave"><span>Pesquisas</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i></a>
+							<a class="opt-list__item" href=""><i class="material-icons">settings</i> <span class="animate leave"><span>Configurações</span></span></a>
 						</div>
 					</div>
 				</div>
 			</div>
 
+			<!--<!-Menu lateral fechado, conteúdo fullscreen->
+			<div class="dock-wrap container column hide">
+				<div class="dock-block container column flex-grow-1">
+					<div class="dock-block__header"><i id="toggle-menu-icon" class="material-icons toggle-menu-icon">menu</i></div>
+					<div class="dock-block__patient container"></div>
+					<div class="dock-block__opt container">
+						<div class="dock-list container column">
+							<a class="dock-list__item dropdown-link" href=""><i class="material-icons">assignment</i></a>
+							<a class="dock-list__item dropdown-link" href=""><i class="material-icons">search</i></a>
+							<a class="dock-list__item" href=""><i class="material-icons">settings</i></a>
+						</div>
+					</div>
+				</div>
+			</div>-->
+
 			<!--Conteúdo principal de interação com a aplicação-->
-			<div class="content-wrap container justify-content-center flex-grow-2">
+			<div id="content" class="content-wrap container justify-content-center flex-grow-5">
 				<div class="content-block container">
 
 				</div>

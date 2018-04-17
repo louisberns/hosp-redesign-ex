@@ -22,9 +22,17 @@
 			@include z-depth(8);
 
 			.header-logo {
-				max-width: 200px;
+
+				.header-logo__menu {
+					display: none;
+					color: $color-white;
+					vertical-align: middle;
+					margin-right: 20px;
+					cursor: pointer;
+				}
 
 				.header-logo__image {
+					max-width: 200px;
 
 					img {
 						width: 80%;

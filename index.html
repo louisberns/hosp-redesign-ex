@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Hospitalar Redesign - Exemplo de estrutura</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -10,7 +12,10 @@
 		<div class="header-wrap container">
 			<header class="header-block container column">
 				<div class="header-block__main container justify-content-between align-items-center">
-					<div class="header-logo container">
+					<div class="header-logo container align-center">
+						<div class="header-logo__menu">
+							<span class="menu-icon"><i class="material-icons toggle-menu-icon">menu</i></span>
+						</div>
 						<div class="header-logo__image">
 							<a href=""><img src="img/logo.svg" alt="logo Benner"></a>
 						</div>
@@ -82,21 +87,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!--<!-Menu lateral fechado, conteúdo fullscreen->
-			<div class="dock-wrap container column hide">
-				<div class="dock-block container column flex-grow-1">
-					<div class="dock-block__header"><i id="toggle-menu-icon" class="material-icons toggle-menu-icon">menu</i></div>
-					<div class="dock-block__patient container"></div>
-					<div class="dock-block__opt container">
-						<div class="dock-list container column">
-							<a class="dock-list__item dropdown-link" href=""><i class="material-icons">assignment</i></a>
-							<a class="dock-list__item dropdown-link" href=""><i class="material-icons">search</i></a>
-							<a class="dock-list__item" href=""><i class="material-icons">settings</i></a>
-						</div>
-					</div>
-				</div>
-			</div>-->
 
 			<!--Conteúdo principal de interação com a aplicação-->
 			<div id="content" class="content-wrap container justify-content-center flex-grow-5">

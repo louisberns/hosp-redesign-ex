@@ -1,0 +1,8 @@
+{
+	"short_name": "hosp",
+	"name": "Hospitalar master exemplo",
+	"theme_color": "#3f51b5",
+	"background_color": "#3f51b5",
+	"display": "standalone",
+	"start_url": "/?launcher=true"
+}

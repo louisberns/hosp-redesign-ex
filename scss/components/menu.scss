@@ -1,8 +1,3 @@
-/*TODO:
- * - add function for close menu
- * - create class for click/active and focus buttons
- */
-
 .menu-wrap {
 	max-width: 260px;
 	width: 10vw;
@@ -11,11 +6,9 @@
 	@include toggle-transition();
 
 	&.menu-wrap___closed {
-		@include toggle-translate($dis: -80%);
-		max-width: 120px;
-		// animation-name: toggle-menu;
-		// animation-duration: .58s;
-		// animation-fill-mode: backwards;
+		@include toggle-translate($dis: -60%);
+		max-width: 130px;
+		min-width: 120px;
 
 		.menu-block {
 			justify-content: flex-end;
@@ -25,7 +18,6 @@
 				display: block;
 				transform: scale(0);
 				transform-origin: center;
-				// font-size: 0;
 				max-width: 0;
 				max-height: 0;
 
@@ -37,11 +29,6 @@
 			}
 
 			span, #patient-pic, .dropdown-icon {
-				// animation-name: toggle-content-menu;
-				// animation-duration: 1s;
-				// animation-fill-mode: backwards;
-				// visibility: hidden;
-				// opacity: 0;
 				@include toggle-transition();
 			}
 
@@ -176,28 +163,5 @@
 				}
 			}
 		}
-	}
-}
-
-
-@keyframes toggle-menu {
-	0% {
-		display: flex;
-		@include toggle-translate($dis: 0);
-	}
-	100% {
-		@include toggle-translate($dis: -80%);
-	}
-}
-
-
-@keyframes toggle-content-menu {
-	0% {
-		visibility: visible;
-		opacity: 0;
-	}
-	100% {
-		visibility: hidden;
-		opacity: 1;
 	}
 }

@@ -12,11 +12,23 @@ const toggleMenuIcon = document.getElementsByClassName("toggle-menu-icon");
 const iconMenu = document.querySelector("#toggle-menu-icon");
 const content = document.querySelector("#content");
 const footer = document.querySelector(".footer-block");
+const menuWrapClass = "menu-wrap___closed";
+
+function toggleMenu() {
+  const toggleMenu = menu.wrap.classList.toggle(menuWrapClass);
+
+  return (toggleMenu ? iconMenu.innerHTML = "menu" : iconMenu.innerHTML = "close");
+}
+
 
 Array.from(toggleMenuIcon).filter(i => {
   i.addEventListener("click", () => {
-    const toggleMenu = menu.wrap.classList.toggle("menu-wrap___closed");
-
-    return (toggleMenu ? iconMenu.innerHTML = "menu" : iconMenu.innerHTML = "close");
+    toggleMenu();
   })
+});
+
+window.addEventListener("resize", i => {
+  if (i.target.innerWidth <= 1100 && !menu.wrap.classList.contains(menuWrapClass)) {
+    toggleMenu();
+  }
 });

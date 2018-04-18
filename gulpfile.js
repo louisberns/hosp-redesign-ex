@@ -25,7 +25,11 @@ gulp.task('serve', function () {
     browserSync.init({
         server: {
             baseDir: baseDirServe
-        }
+        },
+        ui: {
+            port: 9090
+        },
+        port: 9091
     });
 
     //gulp.watch(gulp.series('./img/*.*', './img/**/*.*'));

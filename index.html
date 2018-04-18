@@ -5,6 +5,7 @@
 		<title>Hospitalar Redesign - Exemplo de estrutura</title>
 		<link rel="manifest" href="manifest.json">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="theme-color" content="#3f51b5"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -104,6 +105,16 @@
 				<div class="footer-block__sys container"><strong>Desenvolvimento</strong></div>
 				<div class="footer-block__ver container">Versão 14.00</div>
 			</footer>
+		</div>
+
+		<!--Loader background, interatividade no carregamento-->
+		<div id="loader" class="loader-wrap active">
+			<div class="loader-content container column align-center">
+				<div class="loader-content__animation"></div>
+				<div class="loader-content__text">
+					Carregando...
+				</div>
+			</div>
 		</div>
 
 		<script src="js/main.js" type="text/javascript"></script>

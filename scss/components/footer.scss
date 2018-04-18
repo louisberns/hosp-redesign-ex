@@ -1,5 +1,5 @@
 .footer-wrap {
-	position: absolute;
+	position: fixed;
 	overflow: hidden;
 	bottom: 0;
 	right: 0;
@@ -15,8 +15,6 @@
 		background: $color-primary;
 		opacity: .8;
 		@include toggle-transition();
-
-		@include z-depth-6dp("-");
 
 		.footer-block__sys, .footer-block__ver, .footer-block__blank {
 			min-width: 50px;

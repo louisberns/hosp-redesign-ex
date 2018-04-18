@@ -8,7 +8,13 @@
 		z-index: 99;
 
 		&.menu-wrap___closed {
-			@include toggle-translate($dis: -120%);
+			@include toggle-translate($dis: -100%);
+		}
+
+		.menu-block {
+			.menu-block__header {
+				border-radius: 0;
+			}
 		}
 	}
 
@@ -20,6 +26,10 @@
 						display: flex;
 					}
 				}
+			}
+
+			.header-block__sub {
+				font-size: 12px;
 			}
 		}
 	}

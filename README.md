@@ -10,12 +10,10 @@ Será utilizada para apresentações de workshops sobre padrões de CSS e exempl
 A interface foi desenvolvida com o propósito de mostrar microinterações e responsividade do sistema.
 
 ### Mobile
-![mobile]()
-![mobile menu open]()
+![mobile](https://github.com/louisberns/hosp-redesign-ex/blob/master/img/ui-examples/mobile.png)
 
 ### Desktop
-![desktop]()
-![desktop menu open]()
+![desktop menu open](https://github.com/louisberns/hosp-redesign-ex/blob/master/img/ui-examples/desktop-menu.png)
 
 ## Tecnologias utilizadas
 O projeto foi desenvolvido utilizando Javascript (Vanilla JS, sem frameworks) e CSS com [SASS](https://sass-lang.com/).
@@ -36,9 +34,10 @@ Também utilizado o Task Runner [Gulp](https://gulpjs.com/) para processar os ar
 
 ## Instalação
 Clone o projeto para sua máquina
+
 `$ git clone https://github.com/louisberns/hosp-redesign-ex.git`
 
-Instale as dependências do projeto
+Instale as dependências do projeto com [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/en/)
 ```bash
 $ npm i
 // ou
@@ -46,4 +45,5 @@ $ yarn
 ```
 
 Rode o projeto com o [Gulp](https://gulpjs.com/)
+
 `$ gulp default`

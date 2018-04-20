@@ -1,3 +1,8 @@
+/*TODO: 
+ * - Group all consts into objects, menu, header, content etc
+ * - Add rotate class to user popover open arrow
+ */
+
 const menu = {
   wrap: document.querySelector(".menu-wrap"),
   content: [
@@ -11,6 +16,8 @@ const dock = document.querySelector(".dock-wrap");
 const toggleMenuIcon = document.getElementsByClassName("toggle-menu-icon");
 const iconMenu = document.querySelector("#toggle-menu-icon");
 const menuWrapClass = "menu-wrap___closed";
+const headerUserMenu = document.querySelector(".open-user-menu");
+const popoverUserMenu = document.querySelector(".header-opt__popover");
 const content = document.querySelector("#content");
 const footer = document.querySelector(".footer-block");
 const loader = document.querySelector("#loader");
@@ -44,3 +51,7 @@ document.onreadystatechange = function () {
     window.setTimeout(() => loader.classList.remove("active"), 1000);
   }
 }
+
+headerUserMenu.addEventListener("click", i => {
+  popoverUserMenu.classList.toggle("header-opt__popover___open");
+});

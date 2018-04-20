@@ -9,11 +9,11 @@ Será utilizada para apresentações de workshops sobre padrões de CSS e exempl
 ## Interface
 A interface foi desenvolvida com o propósito de mostrar microinterações e responsividade do sistema.
 
-### Mobile
-![mobile](https://github.com/louisberns/hosp-redesign-ex/blob/master/img/ui-examples/mobile.png)
+Exemplos
+---------
+![exemplos de interface com menu aberto](https://github.com/louisberns/hosp-redesign-ex/blob/master/img/ui-examples/ui-ex-open.png)
 
-### Desktop
-![desktop menu open](https://github.com/louisberns/hosp-redesign-ex/blob/master/img/ui-examples/desktop-menu.png)
+![exemplos de interface com menu fechado](https://github.com/louisberns/hosp-redesign-ex/blob/master/img/ui-examples/ui-ex-close.png)
 
 ## Tecnologias utilizadas
 O projeto foi desenvolvido utilizando Javascript (Vanilla JS, sem frameworks) e CSS com [SASS](https://sass-lang.com/).
@@ -25,6 +25,8 @@ Também utilizado o Task Runner [Gulp](https://gulpjs.com/) para processar os ar
   - Animations
   - @ Media Querys
   - Transition e transform
+  - Material Design Shadows [SCSS Mixins](https://github.com/mrmlnc/material-shadows)
+  - Google Material Icons [Self hosting](https://google.github.io/material-design-icons/#icon-font-for-the-web)
 - JS (Vanilla JS)
   - Arrow functions
   - Funções ternárias

@@ -166,6 +166,27 @@
 						cursor: pointer;
 					}
 				}
+
+				.opt-list__dropdown {
+					display: none;
+
+					&.opt-list__dropdown___open {
+						display: flex;
+
+						.dropdown-list {
+							height: auto;
+
+							.dropdown-list__item {
+								@extend .opt-list__item;
+							}
+						}
+					}
+
+					.dropdown-list {
+						heigth: 0;
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

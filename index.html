@@ -78,7 +78,7 @@
 						<div class="toggle-patient container align-self-end animate">
 							<i class="material-icons md-light">arrow_drop_up</i>
 						</div>
-						<div id="patient-pic" class="patient-pic container align-center animate">
+						<div id="patient-pic" class="patient-pic container align-center animate leave">
 							<img src="img/icons/person.svg" alt="imagem do paciente">
 						</div>
 						<div class="info-patient container column align-items-center animate leave">
@@ -90,25 +90,27 @@
 					</div>
 					<!--Menu para interação com o conteúdo principal do aplicativo acessado-->
 					<div class="menu-block__opt container flex-grow-5">
-						<div class="opt-list container column">
-							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">assignment</i> <span class="animate leave"><span>Cadastros</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i></a>
-							<div class="opt-list__dropdown dropdown-block container column">
-								<ul class="dropdown-list container column">
-									<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
-									<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
-									<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
-								</ul>
-							</div>
-							<a class="opt-list__item dropdown-link" href=""><i class="material-icons">search</i> <span class="animate leave"><span>Pesquisas</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i></a>
-							<div class="opt-list__dropdown dropdown-block container column">
-								<ul class="dropdown-list container column">
-									<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
-									<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
-									<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
-								</ul>
-							</div>
-							<a class="opt-list__item" href=""><i class="material-icons">settings</i> <span class="animate leave"><span>Configurações</span></span></a>
-						</div>
+						<ul class="opt-list container column">
+							<li class="opt-list__item dropdown-link">
+								<i class="material-icons">assignment</i> <span class="animate leave"><span>Cadastros</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i>
+							</li>
+							<ul class="dropdown-list container column">
+								<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
+								<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
+								<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
+							</ul>
+
+							<li class="opt-list__item dropdown-link">
+								<i class="material-icons">search</i> <span class="animate leave"><span>Pesquisas</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i>
+							</li>
+							<ul class="dropdown-list container column">
+								<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
+								<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
+								<li class="dropdown-list__item"><a href="">Dropdown item</a></li>
+							</ul>
+
+							<li class="opt-list__item"><a href="" class="opt-list__link"><i class="material-icons">settings</i> <span class="animate leave"><span>Configurações</span></span></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -116,7 +118,12 @@
 			<!--Conteúdo principal de interação com a aplicação-->
 			<div id="content" class="content-wrap container justify-content-center flex-grow-5">
 				<div class="content-block container">
-
+					<div class="fake-content container wrap justify-content-between">
+						<div class="fake-content__item container" id="fake-one"><img src="img/fake1.svg" alt="" class="fake-image"></div>
+						<div class="fake-content__item container" id="fake-two"><img src="img/fake2.svg" alt="" class="fake-image"></div>
+						<div class="fake-content__item container" id="fake-three"><img src="img/fake3.svg" alt="" class="fake-image"></div>
+						<div class="fake-content__item container" id="fake-four"><img src="img/fake4.svg" alt="" class="fake-image"></div>
+					</div>
 				</div>
 			</div>
 		</div>

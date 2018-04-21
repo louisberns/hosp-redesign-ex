@@ -14,6 +14,9 @@ const menu = {
     pic: document.querySelector("#patient-pic"),
     name: document.querySelector("#patient-name"),
     details: document.querySelector(".details")
+  },
+  options: {
+    dropdown: document.getElementsByClassName("dropdown-icon")
   }
 };
 const dock = document.querySelector(".dock-wrap");
@@ -70,4 +73,11 @@ document.onreadystatechange = function () {
 
 headerUserMenu.addEventListener("click", i => {
   popoverUserMenu.classList.toggle("header-opt__popover___open");
+});
+
+Array.from(menu.options.dropdown).filter(i => {
+  i.addEventListener("click", d => {
+    d.target.parentElement.nextElementSibling.classList.toggle("dropdown-list___open");
+    console.log(d)
+  })
 });

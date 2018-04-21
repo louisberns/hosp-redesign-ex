@@ -3,7 +3,6 @@
 	padding: 0 40px 0 60px;
 	box-sizing: border-box;
 	max-width: 95vw;
-	overflow: scroll;
 	@include toggle-transition();
 
 	.content-block {
@@ -11,7 +10,40 @@
 		background: $color-white;
 		width: 100%;
 		min-width: 300px;
+		height: 100%;
+		overflow: scroll;
 
 		@include z-depth(6);
+
+		.fake-content {
+			margin: 0;
+			padding: 40px;
+			box-sizing: border-box;
+
+			.fake-content__item {
+				justify-content: flex-start;
+				max-width: 45%;
+				align-items: baseline;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			#fake-one {
+				order: 0;
+				max-width: 60%;
+			}
+			#fake-two {
+				order: 1;
+			}
+			#fake-three {
+				order: 2;
+			}
+			#fake-four {
+				order: 3;
+				max-width: 57%;
+			}
+		}
 	}
 }

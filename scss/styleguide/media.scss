@@ -36,6 +36,27 @@
 
 	.content-wrap {
 		max-width: 100vw;
+		padding: 0 24px;
+
+		.content-block {
+
+			.fake-content {
+				padding: 20px;
+
+				.fake-content__item {
+					max-width: 100%;
+					width: 100%;
+					padding: 10px 0;
+				}
+
+				#fake-one,
+				#fake-two,
+				#fake-tree,
+				#fake-four {
+					max-width: 100%;
+				}
+			}
+		}
 	}
 }
 

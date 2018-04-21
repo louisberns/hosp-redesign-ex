@@ -8,10 +8,10 @@
 	width: 10vw;
 	min-width: 230px;
 
-	@include toggle-transition();
+	@include toggle-transition($sec: .42s, $form: ease-in-out);
 
 	&.menu-wrap___closed {
-		@include toggle-translate($dis: -60%);
+		@include toggle-translate($dis: -60%, $sec: .28s, $form: ease-out);
 		max-width: 130px;
 		min-width: 120px;
 
@@ -29,13 +29,9 @@
 				&.leave {
 					visibility: hidden;
 					transition: none;
-					font-size: 14px;
 					opacity: 0;
+					transform: translate(-250%);
 				}
-			}
-
-			span, #patient-pic, .dropdown-icon {
-				@include toggle-transition();
 			}
 
 			.menu-block__header {
@@ -45,7 +41,11 @@
 
 			.menu-block__info {
 				height: 0;
-				@include toggle-transition();
+
+				#patient-pic,
+				.toggle-patient {
+					transition: none;
+				}
 			}
 
 			.menu-block__opt {
@@ -90,8 +90,15 @@
 			border-radius: 0 8px 0 0;
 			font-size: $font-head-sm;
 
-			i {
+			.menu-icon {
+				position: relative;
+			}
+
+			#toggle-menu-icon {
 				cursor: pointer;
+				position: absolute;
+		    top: -12px;
+		    right: -1px;
 			}
 		}
 
@@ -198,25 +205,32 @@
 						cursor: pointer;
 					}
 				}
+				
+				.dropdown-list {
+					height: 0;
+					width: 100%;
+					font-size: $font-size-nm;
+					background: $color-dark;
+					overflow: hidden;
+					@include toggle-transition();
 
-				.opt-list__dropdown {
-					display: none;
+					&.dropdown-list___open {
+						height: 100%;
 
-					&.opt-list__dropdown___open {
-						display: flex;
+						.dropdown-list__item {
 
-						.dropdown-list {
-							height: auto;
-
-							.dropdown-list__item {
-								@extend .opt-list__item;
+							&:hover {
+								background: $color-primary;
 							}
 						}
 					}
 
-					.dropdown-list {
-						heigth: 0;
-						width: 100%;
+					.dropdown-list__item {
+						@extend .opt-list__item;
+
+						a {
+							color: $color-white;
+						}
 					}
 				}
 			}

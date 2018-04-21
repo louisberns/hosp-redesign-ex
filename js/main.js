@@ -1,4 +1,4 @@
-/*TODO: 
+/*TODO:
  * - Group all consts into objects, menu, header, content etc
  * - Add rotate class to user popover open arrow
  */
@@ -10,7 +10,11 @@ const menu = {
     document.querySelector(".menu-block__info"),
     document.querySelector(".menu-block__opt")
   ],
-  patient: document.querySelector("#patient-pic")
+  patient: {
+    pic: document.querySelector("#patient-pic"),
+    name: document.querySelector("#patient-name"),
+    details: document.querySelector(".details")
+  }
 };
 const dock = document.querySelector(".dock-wrap");
 const toggleMenuIcon = document.getElementsByClassName("toggle-menu-icon");
@@ -18,6 +22,7 @@ const iconMenu = document.querySelector("#toggle-menu-icon");
 const menuWrapClass = "menu-wrap___closed";
 const headerUserMenu = document.querySelector(".open-user-menu");
 const popoverUserMenu = document.querySelector(".header-opt__popover");
+const togglePatientIcon = document.querySelector(".toggle-patient");
 const content = document.querySelector("#content");
 const footer = document.querySelector(".footer-block");
 const loader = document.querySelector("#loader");
@@ -28,10 +33,21 @@ function toggleMenu() {
   return (toggleMenu ? iconMenu.innerHTML = "menu" : iconMenu.innerHTML = "close");
 }
 
+function togglePatient() {
+  // let patientName = menu.patient.name;
+  // let patientPic = menu.patient.pic;
+  // let patientDetails = menu.patient.details;
+  let toggle = menu.content[1].classList.toggle("menu-block__info___closed");
+}
+
 Array.from(toggleMenuIcon).filter(i => {
   i.addEventListener("click", () => {
     toggleMenu();
   })
+});
+
+togglePatientIcon.addEventListener("click", i => {
+  togglePatient();
 });
 
 window.addEventListener("resize", i => {

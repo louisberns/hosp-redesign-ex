@@ -22,14 +22,15 @@
 			.animate {
 				display: block;
 				transform: scale(0);
-				transform-origin: center;
+				transform-origin: left;
 				max-width: 0;
 				max-height: 0;
 
 				&.leave {
 					visibility: hidden;
 					transition: none;
-					font-size: 0;
+					font-size: 14px;
+					opacity: 0;
 				}
 			}
 
@@ -99,6 +100,37 @@
 			height: 140px;
 			z-index: 10;
 			margin: 10px 0;
+			@include toggle-transition;
+
+			&.menu-block__info___closed {
+				flex-direction: row;
+				height: 40px;
+
+				.toggle-patient {
+					align-self: center;
+					order: 3;
+
+					@include toggle-transition;
+
+					i {
+						transform: rotate(180deg);
+					}
+				}
+				#patient-pic {
+					width: 30%;
+					height: auto;
+					order: 1;
+				}
+				.info-patient {
+					order: 2;
+					#patient-name {
+
+					}
+					.info-patient__details {
+						display: none;
+					}
+				}
+			}
 
 			.toggle-patient {
 				position: relative;

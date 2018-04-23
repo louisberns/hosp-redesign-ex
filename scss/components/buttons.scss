@@ -1,3 +1,77 @@
 .dropdown___toggle {
   transform: rotate(180deg);
 }
+
+.button {
+	height: auto;
+	width: fit-content;
+	padding: 12px 30px;
+	color: $color-white;
+	background: $color-primary;
+	font-size: $font-size-lg;
+	text-align: center;
+	border-radius: 8px;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	@include toggle-transition($sec: .28s);
+	@include z-depth(4);
+
+
+	&.button-totem {
+		padding: 50px 60px;
+		font-size: $font-size-xx;
+	}
+
+	&.button-sm {
+		padding: 8px 25px;
+		font-size: $font-size-sm;
+	}
+
+	&.button-lg {
+		padding: 20px 40px;
+	}
+
+	&.button-stk {
+		background: transparent;
+		border: 1px solid $color-primary;
+		box-shadow: none;
+		color: $color-primary;
+
+		&:hover {
+			color: $color-white;
+			background: $color-primary;
+			box-shadow: none;
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&.button-flat {
+		background: transparent;
+		color: $color-primary;
+		box-shadow: none;
+
+		&:hover {
+			background: none;
+			box-shadow: none;
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&:hover {
+		filter: opacity(.9);
+		@include z-depth(8);
+	}
+
+	&:active {
+		filter: opacity(1);
+		@include z-depth(2);
+		@include toggle-transition($sec: .28s, $form: ease-in);
+	}
+}

@@ -43,6 +43,10 @@ function togglePatient() {
   let toggle = menu.content[1].classList.toggle("menu-block__info___closed");
 }
 
+function dropdownToggle(target) {
+  target.classList.toggle("dropdown___toggle");
+}
+
 Array.from(toggleMenuIcon).filter(i => {
   i.addEventListener("click", () => {
     toggleMenu();
@@ -51,6 +55,7 @@ Array.from(toggleMenuIcon).filter(i => {
 
 togglePatientIcon.addEventListener("click", i => {
   togglePatient();
+  dropdownToggle(i.target);
 });
 
 window.addEventListener("resize", i => {
@@ -73,11 +78,13 @@ document.onreadystatechange = function () {
 
 headerUserMenu.addEventListener("click", i => {
   popoverUserMenu.classList.toggle("header-opt__popover___open");
+  dropdownToggle(i.target);
 });
 
 Array.from(menu.options.dropdown).filter(i => {
   i.addEventListener("click", d => {
     d.target.parentElement.nextElementSibling.classList.toggle("dropdown-list___open");
+    dropdownToggle(d.target);
     console.log(d)
   })
 });

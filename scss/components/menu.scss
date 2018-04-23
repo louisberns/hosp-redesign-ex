@@ -4,6 +4,7 @@
  */
 
 .menu-wrap {
+	position: relative;
 	max-width: 260px;
 	width: 10vw;
 	min-width: 230px;
@@ -41,6 +42,7 @@
 
 			.menu-block__info {
 				height: 0;
+				min-height: 0;
 
 				#patient-pic,
 				.toggle-patient {
@@ -104,6 +106,7 @@
 
 		.menu-block__info {
 			background: transparent;
+			min-height: 180px;
 			height: 140px;
 			z-index: 10;
 			margin: 10px 0;
@@ -112,6 +115,7 @@
 			&.menu-block__info___closed {
 				flex-direction: row;
 				height: 40px;
+				max-height: 40px;
 
 				.toggle-patient {
 					align-self: center;
@@ -120,13 +124,16 @@
 					@include toggle-transition;
 
 					i {
-						transform: rotate(180deg);
+						//transform: rotate(180deg);
 					}
 				}
 				#patient-pic {
-					width: 30%;
+					max-width: 50px;
+					max-height: 50px;
+					//width: 30%;
 					height: auto;
 					order: 1;
+					transition: none;
 				}
 				.info-patient {
 					order: 2;
@@ -195,6 +202,10 @@
 						margin-right: 12px;
 					}
 
+					a {
+						color: $color-dark;
+					}
+
 					.dropdown-icon {
 						float: right;
 						margin: 0;
@@ -205,7 +216,7 @@
 						cursor: pointer;
 					}
 				}
-				
+
 				.dropdown-list {
 					height: 0;
 					width: 100%;
@@ -215,7 +226,7 @@
 					@include toggle-transition();
 
 					&.dropdown-list___open {
-						height: 100%;
+						height: 160px;
 
 						.dropdown-list__item {
 

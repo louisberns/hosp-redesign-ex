@@ -2,6 +2,19 @@
   transform: rotate(180deg);
 }
 
+.content-buttons {
+	width: 100%;
+
+	.content-buttons__item {
+		width: 50%;
+		box-sizing: border-box;
+
+		.button {
+			margin: 20px 0;
+		}
+	}
+}
+
 .button {
 	height: auto;
 	width: fit-content;
@@ -47,6 +60,12 @@
 		&:active {
 			box-shadow: none;
 		}
+
+		&.alert {
+			background: transparent;
+			border-color: $color-danger;
+			color: $color-danger;
+		}
 	}
 
 	&.button-flat {
@@ -62,6 +81,11 @@
 		&:active {
 			box-shadow: none;
 		}
+
+		&.alert {
+			background: transparent;
+			color: $color-danger;
+		}
 	}
 
 	&:hover {
@@ -73,5 +97,22 @@
 		filter: opacity(1);
 		@include z-depth(2);
 		@include toggle-transition($sec: .28s, $form: ease-in);
+	}
+
+	&.disabled {
+		opacity: 0.5;
+		box-shadow: none;
+		cursor: not-allowed;
+
+		&:hover,
+		&:active,
+		&:focus {
+			box-shadow: none;
+			filter: none;
+		}
+	}
+
+	&.alert {
+		background: $color-danger;
 	}
 }

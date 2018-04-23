@@ -3,6 +3,7 @@
 	padding: 0 0 0 40px;
 	box-sizing: border-box;
 	max-width: 95vw;
+	overflow: scroll;
 	@include toggle-transition();
 
 	.content-block {
@@ -10,8 +11,7 @@
 		background: $color-white;
 		width: 100%;
 		min-width: 300px;
-		height: 100%;
-		overflow: scroll;
+		height: fit-content;
 
 		@include z-depth(6);
 

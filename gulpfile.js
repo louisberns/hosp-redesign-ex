@@ -10,6 +10,7 @@ var browserSync = require('browser-sync').create();
 var rename = require('gulp-rename');
 var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
+var webstandards = require('gulp-webstandards');
 
 var input = './scss/main.scss';
 var inputSCSS = './scss/**/*.scss';
@@ -47,6 +48,11 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(output));
 });
 
+gulp.task('webstandards', function() {
+    return gulp.src(output)
+        pipe(webstandards());
+});
+
 gulp.task('watch', function() {
     return gulp
         // Watch the input folder for change,
@@ -59,4 +65,4 @@ gulp.task('watch', function() {
         });
 });
 
-gulp.task('default', gulp.parallel('sass', 'watch', 'serve'));
+gulp.task('default', gulp.parallel('sass', 'webstandards', 'watch', 'serve'));

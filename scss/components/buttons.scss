@@ -1,118 +1,175 @@
-.dropdown___toggle {
-  transform: rotate(180deg);
-}
-
 .content-buttons {
-	width: 100%;
-
 	.content-buttons__item {
-		width: 50%;
-		box-sizing: border-box;
-
 		.button {
 			margin: 20px 0;
 		}
 	}
 }
 
+ .dropdown___toggle {
+ 	@include toggle-transition(.18s);
+   transform: rotate(180deg);
+ }
+
 .button {
-	height: auto;
-	width: fit-content;
-	padding: 12px 30px;
-	color: $color-white;
-	background: $color-primary;
-	font-size: $font-size-lg;
-	text-align: center;
-	border-radius: 8px;
-	box-sizing: border-box;
-	cursor: pointer;
+  height: auto;
+  width: fit-content;
+  
+  background: $color-primary;
+  font-size: $font-size-lg;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
 
-	@include toggle-transition($sec: .28s);
-	@include z-depth(4);
+  a {
+  	padding: 12px 30px;
+  	color: $color-white;
+  }
 
+  @include toggle-transition($sec: .18s);
+  @include z-depth(4);
 
-	&.button-totem {
-		padding: 50px 60px;
-		font-size: $font-size-xx;
-	}
+  &.button-icon {
 
-	&.button-sm {
-		padding: 8px 25px;
-		font-size: $font-size-sm;
-	}
+    span, i {
+      margin: 0 -5px;
+    }
 
-	&.button-lg {
-		padding: 20px 40px;
-	}
+    i {
+      vertical-align: middle;
+      margin-right: 17px;
+    }
+  }
 
-	&.button-stk {
-		background: transparent;
-		border: 1px solid $color-primary;
-		box-shadow: none;
-		color: $color-primary;
+  &.button-totem {
 
-		&:hover {
-			color: $color-white;
-			background: $color-primary;
-			box-shadow: none;
-		}
+  	a {
+    padding: 50px 60px;
+    font-size: $font-size-xx;
+  	}
+    @include z-depth(8);
 
-		&:active {
-			box-shadow: none;
-		}
+    i {
+      font-size: $font-size-xx;
+    }
 
-		&.alert {
-			background: transparent;
-			border-color: $color-danger;
-			color: $color-danger;
-		}
-	}
+    &:hover {
+      @include z-depth(16);
+    }
+    &:active {
+      @include z-depth(4);
+      @include toggle-transition($sec: .08s, $form: ease-in);
+    }
+  }
 
-	&.button-flat {
-		background: transparent;
-		color: $color-primary;
-		box-shadow: none;
+  &.button-sm {
+  	a {
+    padding: 8px 25px;
+    font-size: $font-size-sm;
+  	}
+  }
 
-		&:hover {
-			background: none;
-			box-shadow: none;
-		}
+  &.button-lg {
+    a { 
+    	padding: 20px 40px;
+    }
+  }
 
-		&:active {
-			box-shadow: none;
-		}
+  &.button-stk {
+    background: transparent;
+    border: 1px solid $color-primary;
+    box-shadow: none;
 
-		&.alert {
-			background: transparent;
-			color: $color-danger;
-		}
-	}
+    a {
+    color: $color-primary;	
+    }
 
-	&:hover {
-		filter: opacity(.9);
-		@include z-depth(8);
-	}
+    &:hover {
+	  a {
+      color: $color-white;
+	  }	
+      background: $color-primary;
+      box-shadow: none;
+    }
 
-	&:active {
-		filter: opacity(1);
-		@include z-depth(2);
-		@include toggle-transition($sec: .28s, $form: ease-in);
-	}
+    &:active {
+      box-shadow: none;
+    }
 
-	&.disabled {
-		opacity: 0.5;
-		box-shadow: none;
-		cursor: not-allowed;
+    &.alert {
+      background: transparent;
+      border-color: $color-danger;
 
-		&:hover,
-		&:active,
-		&:focus {
-			box-shadow: none;
-			filter: none;
-		}
-	}
+      a {
+      color: $color-danger;
+      }
 
-	&.alert {
-		background: $color-danger;
-	}
+      &:hover {
+      	a {
+        color: $color-white;
+      	}
+        background: $color-danger;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.button-flat {
+    background: transparent;
+    box-shadow: none;
+
+    a {
+    color: $color-primary;
+    }
+
+    &:hover {
+      background: none;
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &.alert {
+      background: transparent;
+      
+      a {
+      color: $color-danger;
+      }
+    }
+  }
+
+  &:hover {
+    filter: opacity(.9);
+    @include z-depth(8);
+  }
+
+  &:active {
+    filter: opacity(1);
+    @include z-depth(2);
+    @include toggle-transition($sec: .05s, $form: ease-in);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    box-shadow: none;
+
+    a {
+    	cursor: not-allowed;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      filter: none;
+    }
+  }
+
+  &.alert {
+    background: $color-danger;
+  }
 }

@@ -12,6 +12,7 @@
 		width: 100%;
 		min-width: 300px;
 		height: fit-content;
+		overflow: auto;
 
 		@include z-depth(6);
 

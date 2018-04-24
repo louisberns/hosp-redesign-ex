@@ -16,7 +16,7 @@ const menu = {
     details: document.querySelector(".details")
   },
   options: {
-    dropdown: document.getElementsByClassName("dropdown-icon")
+    dropdown: document.getElementsByClassName("dropdown-menu")
   }
 };
 const dock = document.querySelector(".dock-wrap");
@@ -85,6 +85,5 @@ Array.from(menu.options.dropdown).filter(i => {
   i.addEventListener("click", d => {
     d.target.parentElement.nextElementSibling.classList.toggle("dropdown-list___open");
     dropdownToggle(d.target);
-    console.log(d)
   })
 });

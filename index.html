@@ -92,7 +92,7 @@
 					<div class="menu-block__opt container flex-grow-5">
 						<ul class="opt-list container column">
 							<li class="opt-list__item dropdown-link">
-								<i class="material-icons">assignment</i> <span class="animate leave"><span>Cadastros</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i>
+								<i class="material-icons">assignment</i> <span class="animate leave"><span>Cadastros</span></span> <i class="material-icons dropdown-menu animate leave">arrow_drop_down</i>
 							</li>
 							<ul class="dropdown-list container column">
 								<li class="dropdown-list__item"><a href="#!">Dropdown item</a></li>
@@ -101,7 +101,7 @@
 							</ul>
 
 							<li class="opt-list__item dropdown-link">
-								<i class="material-icons">search</i> <span class="animate leave"><span>Pesquisas</span></span> <i class="material-icons dropdown-icon animate leave">arrow_drop_down</i>
+								<i class="material-icons">search</i> <span class="animate leave"><span>Pesquisas</span></span> <i class="material-icons dropdown-menu animate leave">arrow_drop_down</i>
 							</li>
 							<ul class="dropdown-list container column">
 								<li class="dropdown-list__item"><a href="#!">Dropdown item</a></li>
@@ -117,8 +117,72 @@
 
 			<!--Conteúdo principal de interação com a aplicação-->
 			<div id="content" class="content-wrap container justify-content-center flex-grow-5">
-				<div class="content-block container column">
-					<div class="content-buttons container wrap justify-content-between padding-20">
+				<div class="content-block container column padding-20">
+
+					<div class="content-forms container column justify-content-between padding-40">
+						<h2>Forms/dropdown e pesquisa</h2>
+						
+						<div class="container column justify-content-start">
+
+							<div class="container align-items-center">
+								<div class="content-forms__item form-field container column justify-content-start">
+									<label class="form-field__label" for="search-field">Pesquisar</label>
+									<div class="container align-items-center search-block">
+										<i class="material-icons">search</i>
+										<input id="search-field" class="form-field__input margin-right-20" type="text" placeholder="O que quer pesquisar?">
+										<div class="button"><a href="#!">Pesquisar</a></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container wrap justify-content-start">
+								<div class="content-forms__item form-field container column">
+									<label for="nome" class="form-field__label">Nome</label>
+									<input type="text" class="form-field__input" id="nome">
+								</div>
+								<div class="content-forms__item form-field container column">
+									<label for="sobrenome" class="form-field__label">Sobrenome</label>
+									<input type="text" class="form-field__input" id="sobrenome">
+								</div>
+								<div class="content-forms__item form-field container column">
+									<label for="rg" class="form-field__label">RG</label>
+									<input type="text" class="form-field__input" id="rg" placeholder="10.123.456-00">
+								</div>
+								<div class="content-forms__item form-field container column">
+									<label for="cpf" class="form-field__label">CPF</label>
+									<input type="text" class="form-field__input" id="cpf" placeholder="123.456.789-00">
+								</div>
+								<div class="content-forms__item form-field container column">
+									<label for="tel" class="form-field__label">Telefone</label>
+									<input type="text" class="form-field__input" id="tel" placeholder="(44) 3222-0000">
+								</div>
+								<div class="content-forms__item form-field container column">
+									<label for="cel" class="form-field__label">Celular</label>
+									<input type="text" class="form-field__input" id="cel" placeholder="(44) 9 9999-0000">
+								</div>
+								<div class="content-forms__item form-field container column">
+									<label for="est-civil" class="form-field__label">Estado Civil</label>
+
+									<div class="container align-items-center dropdown-block">
+										<input type="text" class="form-field__input" id="est-civil">
+										<i class="material-icons dropdown-menu">arrow_drop_down</i>
+									</div>
+
+									<fieldset class="form-field__dropdown">
+										<div class="dropdown-checkbox"><label><input type="checkbox">Solteirx</label></div>
+										<div class="dropdown-checkbox"><label><input type="checkbox">Casadx</label></div>
+										<div class="dropdown-checkbox"><label><input type="checkbox">Divorciadx/Viúvx</label></div>
+									</fieldset>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="content-buttons container wrap justify-content-between">
 						<div class="content-buttons__item container column padding-40">
 							<h2>Botões - normal</h2>
 							<div class="button">

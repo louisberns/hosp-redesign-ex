@@ -1,3 +1,8 @@
+/*
+ * - Add Radio buttons - http://materializecss.com/radio-buttons.html
+ * - Add filters w/ dropdowns
+ */
+
 .content-forms {
 	.content-forms__item {
 		margin: 10px 20px 0 0;
@@ -100,8 +105,106 @@
 	}
 }
 
+.checkboxes {
+	label {
+		position: relative;
+	}
+}
+
+input {
+    margin: 0;
+	font-size: 100%;
+    line-height: 1.15;
+    overflow: visible;
+}
+
 ::-webkit-input-placeholder {
 	color: $color-dark;
 	font-size: $font-size-lg;
 	opacity: .5;
+}
+
+[type="checkbox"]+span {
+	display: inline-block;
+	position: relative;
+	height: 25px;
+	padding-left: 35px;
+	line-height: 25px;
+	font-size: 1rem;
+	cursor: pointer;
+	user-select: none;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	position: absolute;
+	padding: 0;
+	opacity: 0;
+	pointer-events: none;
+	box-sizing: border-box;
+}
+
+[type="checkbox"] {
+	&+span::before,
+	 +span::after {
+	 	content: ' ';
+	 	position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 18px;
+	    height: 18px;
+	    z-index: 0;
+	    border: 2px solid $color-dark;
+	    border-radius: 1px;
+	    margin-top: 3px;
+	    transition: .2s;
+	    z-index: 100;
+
+	    @include toggle-transition($sec: .25s);
+	 }
+
+	&:checked {
+		&+span::before {
+			top: 2px;
+		    left: 1px;
+		    width: 8px;
+		    height: 13px;
+		    border-top: 2px solid transparent;
+		    border-left: 2px solid transparent;
+		    border-right: 2px solid $color-white;
+		    border-bottom: 2px solid $color-white;
+		    transform: rotateZ(37deg);
+		    transform-origin: 100% 100%;
+		}
+
+		&+span::after {
+		    top: 0;
+		    width: 20px;
+		    height: 20px;
+		    border: 2px solid $color-primary-light;
+		    background-color: $color-primary-light;
+		    z-index: 90;
+		}
+	}
+
+	&:not(:checked) {
+		&+span::before {
+			width: 0;
+			height: 0;
+			border: 3px solid transparent;
+			left: 6px;
+			top: 10px;
+			transform: rotateZ(37deg);
+			transform-origin: 100% 100%;
+		}
+
+		&+span::after {
+			width: 20px;
+			height: 20px;
+			top: 0px;
+			background-color: transparent;
+			border: 2px solid $color-dark;
+			z-index: 90;
+		}
+	}
 }

@@ -87,3 +87,11 @@ Array.from(menu.options.dropdown).filter(i => {
     dropdownToggle(d.target);
   })
 });
+
+Array.from(document.querySelectorAll(".checkboxes")).map(i => {
+  i.addEventListener("click", t => {
+    let elem = t.target.previousSibling;
+
+    return (elem.checked ? elem.checked = false : elem.checked = true);
+  });
+});

@@ -1,20 +1,25 @@
 .content-wrap {
-	margin: 0;
-	padding: 0 0 0 40px;
+	margin: 0 0 0 20px;
+	padding: 0 0 40px;
 	box-sizing: border-box;
 	max-width: 95vw;
+	width: 75%;
+	height: 100%;
+	border-radius: 8px;
+	background: $color-white;
 	overflow: scroll;
+	order: 2;
+
 	@include toggle-transition();
+	@include z-depth(6);
 
 	.content-block {
-		border-radius: 8px;
-		background: $color-white;
 		width: 100%;
 		min-width: 300px;
 		height: fit-content;
 		overflow: auto;
 
-		@include z-depth(6);
+		
 
 		.fake-content {
 			margin: 0;

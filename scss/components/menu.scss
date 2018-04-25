@@ -5,9 +5,11 @@
 
 .menu-wrap {
 	position: relative;
-	max-width: 260px;
-	width: 10vw;
+	width: 20%;
+	max-width: 10vw;
 	min-width: 230px;
+	margin-right: 20px;
+	order: 1;
 
 	@include toggle-transition($sec: .42s, $form: ease-in-out);
 

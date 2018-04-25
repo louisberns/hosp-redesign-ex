@@ -145,19 +145,19 @@
 							</div>
 							<div class="content-forms__item form-field container column">
 								<label for="rg" class="form-field__label">RG</label>
-								<input type="text" class="form-field__input" id="rg" placeholder="10.123.456-00">
+								<input type="text" class="form-field__input" id="rg" placeholder="10.123.456-00" data-inputmask="'mask' : '99.999.999-99'">
 							</div>
 							<div class="content-forms__item form-field container column">
 								<label for="cpf" class="form-field__label">CPF</label>
-								<input type="text" class="form-field__input" id="cpf" placeholder="123.456.789-00">
+								<input type="text" class="form-field__input" id="cpf" placeholder="123.456.789-00" data-inputmask="'mask' : '999.999.999-99'">
 							</div>
 							<div class="content-forms__item form-field container column">
 								<label for="tel" class="form-field__label">Telefone</label>
-								<input type="text" class="form-field__input" id="tel" placeholder="(44) 3222-0000">
+								<input type="text" class="form-field__input" id="tel" placeholder="(44) 3222-0000" data-inputmask="'mask' : '(99) 9999-9999'">
 							</div>
 							<div class="content-forms__item form-field container column">
 								<label for="cel" class="form-field__label">Celular</label>
-								<input type="text" class="form-field__input" id="cel" placeholder="(44) 9 9999-0000">
+								<input type="text" class="form-field__input" id="cel" placeholder="(44) 9 9999-0000" data-inputmask="'mask' : '(99) 9999[9]-9999'">
 							</div>
 							<div class="content-forms__item form-field container column">
 								<label for="est-civil" class="form-field__label">Estado Civil</label>
@@ -275,5 +275,11 @@
 		</div>
 
 		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/inputmask/inputmask.dependencyLib.js"></script>
+		<script src="js/inputmask/inputmask.js"></script>
+
+		<script>
+			Inputmask().mask(document.querySelectorAll("input"));
+		</script>
 	</body>
 </html>

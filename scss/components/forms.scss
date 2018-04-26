@@ -48,6 +48,7 @@
 		border: none;
 		border-radius: 8px;
 		display: none;
+		z-index: 100;
 
 		@include z-depth(8);
 

@@ -92,6 +92,6 @@ Array.from(document.querySelectorAll(".checkboxes")).map(i => {
   i.addEventListener("click", t => {
     let elem = t.target.previousSibling;
 
-    return (elem.checked ? elem.checked = false : elem.checked = true);
+    return elem.checked ? elem.checked = false : elem.checked = true;
   });
 });

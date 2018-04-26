@@ -16,7 +16,7 @@
 	.form-field__label {
 		font-weight: 700;
 		color: $color-dark;
-		font-size: $font-size-lg;
+		font-size: $font-size-nm;
 		margin-bottom: 12px;
 	}
 
@@ -28,7 +28,7 @@
 		border: none;
 		box-sizing: border-box;
 		color: $color-dark;
-		font-size: $font-size-lg;
+		font-size: $font-size-nm;
 
 		&:focus {
 			outline: none;
@@ -127,7 +127,7 @@
 		position: relative;
 
 		span {
-			font-size: $font-size-lg;
+			font-size: $font-size-nm;
 			color: $color-dark;
 		}
 	}
@@ -142,7 +142,7 @@ input {
 
 ::-webkit-input-placeholder {
 	color: $color-dark;
-	font-size: $font-size-lg;
+	font-size: $font-size-nm;
 	opacity: .5;
 }
 
@@ -235,7 +235,7 @@ input {
 		display: inline-block;
 		height: 25px;
 		line-height: 25px;
-		font-size: $font-size-lg;
+		font-size: $font-size-nm;
 		padding-left: 35px;
 		user-select: none;
 		cursor: pointer;
@@ -332,7 +332,7 @@ input {
 			padding: 17px 20px;
 			background: $color-white;
 			color: $color-dark;
-			font-size: $font-size-lg;
+			font-size: $font-size-nm;
 			cursor: pointer;
 			user-select: none;
 

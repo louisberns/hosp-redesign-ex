@@ -4,8 +4,24 @@
  * - Fix radio checkbox p/ desmarcar outros inputs selecionados
  */
 
+const layout = {
+  dock: document.querySelector(".dock-wrap"),
+  content: document.querySelector("#content"),
+  loader: document.querySelector("#loader")
+}
+
+const header = {
+  user: {
+    menu: document.querySelector(".open-user-menu"),
+    popover: document.querySelector(".header-opt__popover")
+  }
+}
+
 const menu = {
-  wrap: document.querySelector(".menu-wrap"),
+  wrap: {
+    block: document.querySelector(".menu-wrap"),
+    closeClass: "menu-wrap___closed"
+  },
   content: [
     document.querySelector(".menu-block__header"),
     document.querySelector(".menu-block__info"),
@@ -14,10 +30,15 @@ const menu = {
   patient: {
     pic: document.querySelector("#patient-pic"),
     name: document.querySelector("#patient-name"),
-    details: document.querySelector(".details")
+    details: document.querySelector(".details"),
+    toggle: document.querySelector(".toggle-patient")
   },
   options: {
     dropdown: document.getElementsByClassName("dropdown-menu")
+  },
+  trigger: {
+    menuIcon: document.querySelector("#toggle-menu-icon"),
+    groupIcon: document.querySelectorAll(".toggle-menu-icon")
   }
 };
 const forms = {
@@ -34,21 +55,18 @@ const forms = {
     trigger: document.querySelectorAll(".radio-button__item label")
   }
 }
-const dock = document.querySelector(".dock-wrap");
-const toggleMenuIcon = document.getElementsByClassName("toggle-menu-icon");
-const iconMenu = document.querySelector("#toggle-menu-icon");
-const menuWrapClass = "menu-wrap___closed";
-const headerUserMenu = document.querySelector(".open-user-menu");
-const popoverUserMenu = document.querySelector(".header-opt__popover");
-const togglePatientIcon = document.querySelector(".toggle-patient");
-const content = document.querySelector("#content");
-const footer = document.querySelector(".footer-block");
-const loader = document.querySelector("#loader");
+
+const footer = {
+    block: document.querySelector(".footer-block")
+}
+
+
+/* Functions and Listeners */
 
 function toggleMenu() {
-  const toggleMenu = menu.wrap.classList.toggle(menuWrapClass);
+  const toggleMenu = menu.wrap.block.classList.toggle(menu.wrap.closeClass);
 
-  return (toggleMenu ? iconMenu.innerHTML = "menu" : iconMenu.innerHTML = "close");
+  return (toggleMenu ? menu.trigger.menuIcon.innerHTML = "menu" : menu.trigger.menuIcon.innerHTML = "close");
 }
 
 function togglePatient() {
@@ -77,37 +95,37 @@ function changeInput(elem) {
   forms.select.input.value = elem.target.innerText;
 }
 
-Array.from(toggleMenuIcon).filter(i => {
+Array.from(menu.trigger.groupIcon).filter(i => {
   i.addEventListener("click", () => {
     toggleMenu();
   })
 });
 
-togglePatientIcon.addEventListener("click", i => {
+menu.patient.toggle.addEventListener("click", i => {
   togglePatient();
   dropdownToggle(i.target);
 });
 
 window.addEventListener("resize", i => {
-  if (i.target.innerWidth <= 1100 && !menu.wrap.classList.contains(menuWrapClass)) {
+  if (i.target.innerWidth <= 1100 && !menu.wrap.block.classList.contains(menu.wrap.closeClass)) {
     toggleMenu();
   } else { return }
 });
 
 document.onreadystatechange = function () {
   if (document.readyState === "loading") {
-    loader.classList.add("active");
+    layout.loader.classList.add("active");
   } else if (document.readyState === "interactive") {
-    if (window.innerWidth <= 1100 && !menu.wrap.classList.contains(menuWrapClass)) {
+    if (window.innerWidth <= 1100 && !menu.wrap.block.classList.contains(menu.wrap.closeClass)) {
       toggleMenu();
     }
   } else if (document.readyState === "complete") {
-    window.setTimeout(() => loader.classList.remove("active"), 1000);
+    window.setTimeout(() => layout.loader.classList.remove("active"), 1000);
   }
 }
 
-headerUserMenu.addEventListener("click", i => {
-  popoverUserMenu.classList.toggle("header-opt__popover___open");
+header.user.menu.addEventListener("click", i => {
+  header.user.popover.classList.toggle("header-opt__popover___open");
   dropdownToggle(i.target);
 });
 
@@ -128,8 +146,6 @@ Array.from(forms.checkboxes).map(i => {
 Array.from(forms.radio.trigger).map(i => {
   i.addEventListener("click", t => {
     let elem = t.target.previousSibling;
-
-    console.dir(i);
 
     radioToggle(i.parentNode.parentNode);
     return checkedToggle(elem);

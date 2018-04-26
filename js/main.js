@@ -1,6 +1,7 @@
 /*TODO:
  * - Group all consts into objects, menu, header, content etc
  * - Add rotate class to user popover open arrow
+ * - Fix radio checkbox p/ desmarcar outros inputs selecionados
  */
 
 const menu = {
@@ -26,6 +27,11 @@ const forms = {
     listItem: document.querySelectorAll(".select-list__item"),
     trigger: document.querySelector(".select-icon"),
     toggleClass: "select-list___open"
+  },
+  checkboxes: document.querySelectorAll(".checkboxes"),
+  radio: {
+    item: document.querySelectorAll(".radio-button__item"),
+    trigger: document.querySelectorAll(".radio-button__item label")
   }
 }
 const dock = document.querySelector(".dock-wrap");
@@ -46,9 +52,6 @@ function toggleMenu() {
 }
 
 function togglePatient() {
-  // let patientName = menu.patient.name;
-  // let patientPic = menu.patient.pic;
-  // let patientDetails = menu.patient.details;
   let toggle = menu.content[1].classList.toggle("menu-block__info___closed");
 }
 
@@ -56,8 +59,14 @@ function dropdownToggle(target) {
   target.classList.toggle("dropdown___toggle");
 }
 
-function checkboxToggle(elem) {
+function checkedToggle(elem) {
   return elem.checked ? elem.checked = false : elem.checked = true;
+}
+
+function radioToggle(elem) {
+  Array.from(elem).map(i => {
+    i.checked = false;
+  });
 }
 
 function toggleSelect() {
@@ -109,12 +118,23 @@ Array.from(menu.options.dropdown).filter(i => {
   })
 });
 
-Array.from(document.querySelectorAll(".checkboxes")).map(i => {
+Array.from(forms.checkboxes).map(i => {
   i.addEventListener("click", t => {
     let elem = t.target.previousSibling;
-    return checkboxToggle(elem);
+    return checkedToggle(elem);
   });
 });
+
+Array.from(forms.radio.trigger).map(i => {
+  i.addEventListener("click", t => {
+    let elem = t.target.previousSibling;
+
+    console.dir(i);
+
+    radioToggle(i.parentNode.parentNode);
+    return checkedToggle(elem);
+  })
+})
 
 forms.select.trigger.addEventListener("click", i => {
   toggleSelect();

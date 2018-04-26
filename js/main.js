@@ -19,6 +19,15 @@ const menu = {
     dropdown: document.getElementsByClassName("dropdown-menu")
   }
 };
+const forms = {
+  select: {
+    input: document.querySelector(".select-input"),
+    list: document.querySelector(".select-list"),
+    listItem: document.querySelectorAll(".select-list__item"),
+    trigger: document.querySelector(".select-icon"),
+    toggleClass: "select-list___open"
+  }
+}
 const dock = document.querySelector(".dock-wrap");
 const toggleMenuIcon = document.getElementsByClassName("toggle-menu-icon");
 const iconMenu = document.querySelector("#toggle-menu-icon");
@@ -45,6 +54,18 @@ function togglePatient() {
 
 function dropdownToggle(target) {
   target.classList.toggle("dropdown___toggle");
+}
+
+function checkboxToggle(elem) {
+  return elem.checked ? elem.checked = false : elem.checked = true;
+}
+
+function toggleSelect() {
+  return forms.select.list.classList.toggle(forms.select.toggleClass);
+}
+
+function changeInput(elem) {
+  forms.select.input.value = elem.target.innerText;
 }
 
 Array.from(toggleMenuIcon).filter(i => {
@@ -91,7 +112,17 @@ Array.from(menu.options.dropdown).filter(i => {
 Array.from(document.querySelectorAll(".checkboxes")).map(i => {
   i.addEventListener("click", t => {
     let elem = t.target.previousSibling;
+    return checkboxToggle(elem);
+  });
+});
 
-    return elem.checked ? elem.checked = false : elem.checked = true;
+forms.select.trigger.addEventListener("click", i => {
+  toggleSelect();
+});
+
+Array.from(forms.select.listItem).map(i => {
+  i.addEventListener("click", t => {
+    changeInput(t);
+    toggleSelect();
   });
 });

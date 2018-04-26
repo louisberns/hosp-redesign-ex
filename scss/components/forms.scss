@@ -94,6 +94,7 @@
 
 .dropdown-block {
 	position: relative;
+	width: fit-content;
 
 	i {
 		position: absolute;
@@ -207,5 +208,62 @@ input {
 			border: 2px solid $color-dark;
 			z-index: 90;
 		}
+	}
+}
+
+/* Select List Component */
+.form-field__select {
+	.select-input {
+		position: relative;
+	}
+	.select-list {
+		position: absolute;
+		display: none;
+		min-width: 100px;
+		max-height: 400px;
+		height: fit-content;
+		top: 25px;
+		right: 0px;
+		padding: 0;
+		margin: 0;
+		border-radius: 4px;
+		box-sizing: border-box;
+		opacity: 0;
+		overflow-y: auto;
+		z-index: 999;
+
+		@include toggle-transition($sec: .18s);
+		@include z-depth(16);
+
+		&.select-list___open {
+			display: block;
+			min-width: 300px;
+			transform-origin: 0px 0px 0px;
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		.select-list__item {
+			margin: 0;
+			padding: 17px 20px;
+			background: $color-white;
+			color: $color-dark;
+			font-size: $font-size-lg;
+			cursor: pointer;
+			user-select: none;
+
+			@include toggle-transition($sec: .1s);
+
+			&:hover {
+				background: $color-primary-light;
+				color: $color-white;
+			}
+		}
+	}
+	.select-icon {
+		position: absolute;
+		top: 31px;
+		right: 12px;
+		padding: 10px 0 10px 80%
 	}
 }

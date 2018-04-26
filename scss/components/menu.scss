@@ -200,6 +200,8 @@
 					width: 100%;
 					color: $color-dark;
 
+					@include toggle-transition($sec: .1s);
+
 					i {
 						margin-right: 12px;
 					}

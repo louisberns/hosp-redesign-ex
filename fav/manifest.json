@@ -1,11 +1,6 @@
 {
-	"short_name": "hosp",
-  "name": "Hospitalar master exemplo",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
-  "display": "fullscreen",
-  "start_url": "/",
- 	"icons": [
+ "name": "App",
+ "icons": [
   {
    "src": "\/android-icon-36x36.png",
    "sizes": "36x36",

@@ -4,7 +4,6 @@
   "private": true,
   "devDependencies": {
     "gulp": "v4.0.0",
-    "node-sass": "^4.7.2",
     "npm": "v5.6.0"
   },
   "dependencies": {
@@ -15,6 +14,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-webstandards": "^0.1.1",
-    "material-design-icons": "^3.0.1"
+    "material-design-icons": "^3.0.1",
+    "node-sass": "^4.9.0"
   }
 }

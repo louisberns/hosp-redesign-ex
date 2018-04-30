@@ -4,17 +4,16 @@
   "private": true,
   "devDependencies": {
     "gulp": "v4.0.0",
-    "npm": "v5.6.0"
+    "npm": "v6.0.0"
   },
   "dependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-clean-css": "^3.9.2",
+    "browser-sync": "^2.24.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
     "gulp-cli": "^2.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-webstandards": "^0.1.1",
-    "material-design-icons": "^3.0.1",
-    "node-sass": "^4.9.0"
+    "material-design-icons": "^3.0.1"
   }
 }

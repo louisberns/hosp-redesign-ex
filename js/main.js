@@ -34,7 +34,7 @@ const menu = {
     toggle: document.querySelector(".toggle-patient")
   },
   options: {
-    dropdown: document.getElementsByClassName("dropdown-menu")
+    dropdown: document.getElementsByClassName("dropdown-link")
   },
   trigger: {
     menuIcon: document.querySelector("#toggle-menu-icon"),
@@ -131,8 +131,9 @@ header.user.menu.addEventListener("click", i => {
 
 Array.from(menu.options.dropdown).filter(i => {
   i.addEventListener("click", d => {
-    d.target.parentElement.nextElementSibling.classList.toggle("dropdown-list___open");
-    dropdownToggle(d.target);
+    console.log(i, d);
+    d.target.nextElementSibling.classList.toggle("dropdown-list___open");
+    dropdownToggle(d.target.lastElementChild);
   })
 });
 

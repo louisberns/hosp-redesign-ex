@@ -1,6 +1,6 @@
 /*TODO:
  * - Change transition text font-size, when oppened to direction
- * - Fix transition time on menu toggle
+ * - Fix click on opt link dropdown trigger
  */
 
 .menu-wrap {
@@ -63,6 +63,16 @@
 
 						i {
 							margin: 0;
+						}
+					}
+
+					.dropdown-list {
+						&.dropdown-list___open {
+							position: absolute;
+							width: 110%;
+							left: 10px;
+
+							@include toggle-translate($dis: 100%);
 						}
 					}
 				}
@@ -245,6 +255,7 @@
 
 						a {
 							color: $color-white;
+							text-align: left;
 						}
 					}
 				}

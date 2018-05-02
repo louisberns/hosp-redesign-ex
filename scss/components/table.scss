@@ -1,1 +1,29 @@
 /* Table style */
+.table-wrapper {
+  display: table;
+  width: 100%;
+
+  thead,
+  tbody {
+    tr {
+      height: 40px;
+
+      th,
+      td {
+        display: table-cell;
+        text-align: left;
+        font-family: $font-primary;
+        font-size: $font-size-nm;
+        color: $color-dark;
+      }
+    }
+  }
+
+  thead {
+
+  }
+
+  tbody {
+    overflow: auto;
+  }
+}

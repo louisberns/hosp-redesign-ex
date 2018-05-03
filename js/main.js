@@ -41,6 +41,11 @@ const menu = {
     groupIcon: document.querySelectorAll(".toggle-menu-icon")
   }
 };
+
+const buttons = {
+  totem: document.querySelectorAll(".button-totem")
+}
+
 const forms = {
   select: {
     input: document.querySelector(".select-input"),
@@ -111,6 +116,11 @@ function toggleSelect() {
 }
 function changeInput(elem) {
   forms.select.input.value = elem.target.innerText;
+}
+
+// Toggle class "active" for loader and select row etc
+function toggleActive(elem) {
+  elem.classList.toggle("active");
 }
 
 // Listener for menu icon click open/close
@@ -205,5 +215,13 @@ Array.from(tables.checkboxes.input).map(i => {
 Array.from(tables.checkboxes.header).map(i => {
   i.addEventListener("click", i => {
 
+  });
+});
+
+// Listener for loader no botão do totem
+Array.from(buttons.totem).map(i => {
+  i.addEventListener("click", t => {
+    let item = t.target.parentNode;
+    toggleActive(item);
   });
 });

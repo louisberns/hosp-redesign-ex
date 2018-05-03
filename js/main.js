@@ -56,6 +56,16 @@ const forms = {
   }
 }
 
+const tables = {
+  wrapper: document.querySelectorAll(".table-wrapper"),
+  block: document.querySelectorAll(".table-block"),
+  checkboxes: {
+    block: document.querySelectorAll(".table-block .checkboxes"),
+    input: document.querySelectorAll(".table-block .checkboxes input[type='checkbox']"),
+    header: document.querySelectorAll(".table-block th .checkboxes input[type='checkbox']")
+  }
+}
+
 const footer = {
     block: document.querySelector(".footer-block")
 }
@@ -63,55 +73,67 @@ const footer = {
 
 /* Functions and Listeners */
 
+// Menu lateral toggle + icon
 function toggleMenu() {
   const toggleMenu = menu.wrap.block.classList.toggle(menu.wrap.closeClass);
 
   return (toggleMenu ? menu.trigger.menuIcon.innerHTML = "menu" : menu.trigger.menuIcon.innerHTML = "close");
 }
 
+// Info paciente menu lateral
 function togglePatient() {
   let toggle = menu.content[1].classList.toggle("menu-block__info___closed");
 }
 
+// Open dropdown
 function dropdownToggle(target) {
   target.classList.toggle("dropdown___toggle");
 }
 
+// Checkbox check function
 function checkedToggle(elem) {
   return elem.checked ? elem.checked = false : elem.checked = true;
 }
 
+// Radio button check function
 function radioToggle(elem) {
   Array.from(elem).map(i => {
     i.checked = false;
   });
 }
 
+/*
+ * Select form field toggle
+ * Change the input for selected option
+ */
 function toggleSelect() {
   return forms.select.list.classList.toggle(forms.select.toggleClass);
 }
-
 function changeInput(elem) {
   forms.select.input.value = elem.target.innerText;
 }
 
+// Listener for menu icon click open/close
 Array.from(menu.trigger.groupIcon).filter(i => {
   i.addEventListener("click", () => {
     toggleMenu();
   })
 });
 
+// Listener for toggle patient side menu
 menu.patient.toggle.addEventListener("click", i => {
   togglePatient();
   dropdownToggle(i.target);
 });
 
+// Responsividade - close side menu on resize window
 window.addEventListener("resize", i => {
   if (i.target.innerWidth <= 1100 && !menu.wrap.block.classList.contains(menu.wrap.closeClass)) {
     toggleMenu();
   } else { return }
 });
 
+// Listener for loading page and activate loader
 document.onreadystatechange = function () {
   if (document.readyState === "loading") {
     layout.loader.classList.add("active");
@@ -124,11 +146,13 @@ document.onreadystatechange = function () {
   }
 }
 
+// Header popover menu for user settings
 header.user.menu.addEventListener("click", i => {
   header.user.popover.classList.toggle("header-opt__popover___open");
   dropdownToggle(i.target);
 });
 
+// Toggle dropdown options on side menu
 Array.from(menu.options.dropdown).filter(i => {
   i.addEventListener("click", d => {
     console.log(i, d);
@@ -137,6 +161,7 @@ Array.from(menu.options.dropdown).filter(i => {
   })
 });
 
+// Listener for checkboxes click
 Array.from(forms.checkboxes).map(i => {
   i.addEventListener("click", t => {
     let elem = t.target.previousSibling;
@@ -144,6 +169,7 @@ Array.from(forms.checkboxes).map(i => {
   });
 });
 
+// Listener for radio button click
 Array.from(forms.radio.trigger).map(i => {
   i.addEventListener("click", t => {
     let elem = t.target.previousSibling;
@@ -153,13 +179,31 @@ Array.from(forms.radio.trigger).map(i => {
   })
 })
 
+ /*
+  * Listener for select list click
+  * Select option and change the input
+  */
 forms.select.trigger.addEventListener("click", i => {
   toggleSelect();
 });
-
 Array.from(forms.select.listItem).map(i => {
   i.addEventListener("click", t => {
     changeInput(t);
     toggleSelect();
+  });
+});
+
+/*
+ * Listeners for checkboxes in tables
+ * Header checkbox selects all table checkboxes
+ */
+Array.from(tables.checkboxes.input).map(i => {
+  i.addEventListener("change", t => {
+    console.log(t);
+  });
+});
+Array.from(tables.checkboxes.header).map(i => {
+  i.addEventListener("click", i => {
+
   });
 });
